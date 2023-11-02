@@ -1,0 +1,23 @@
+# ctfcli ctfd challenge spec: https://github.com/CTFd/ctfcli/blob/master/ctfcli/spec/challenge-example.yml
+
+name: "1bitVM"
+author: "anton@sijanec.eu"
+category: misc
+description: 1bitVM is an idea for an architecture with one instruction bit. It is currently serving a simple website and is storing the flag somewhere in it's mere 128 bits of RAM. Local setup: run make run to start the server on port 6844 locally
+value: 8
+type: standard
+
+image: healthcheck
+
+protocol: tcp
+
+connection_info: nc b.4a.si 6844
+
+flags:
+  - cnctf{hard2pwnUnknownArch}---
+  - cnctf{hard2pwnUnknownArch}
+
+files:
+  - 1bitvm.tar.gz
+
+version: 0.1

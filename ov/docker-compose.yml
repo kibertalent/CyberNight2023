@@ -1,0 +1,9 @@
+services:
+  1bitvm:
+    build: .
+    ports:
+      - "6844:6844"
+    restart:
+      always
+    environment:
+      - flag=cnctf{hard2pwnUnknownArch} # if challenge breaks, you may have made the flag too long (128b RAM!)
